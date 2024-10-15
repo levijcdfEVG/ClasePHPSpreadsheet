@@ -25,4 +25,3 @@ foreach ($hojaTrabajo->getRowIterator(2) as $fila) { //El get row iterator es el
     }
     $estudiantes[] = $datosEstudiante;
 }
-
