@@ -1,8 +1,8 @@
 <?php
 
-require 'vendor/autoload.php';
+require '../vendor/autoload.php';
 
-use PhpOffice\PhpSpreadsheet\IOFactory;
+use \PhpOffice\PhpSpreadsheet\IOFactory;
 
 // Cargar el archivo de Excel
 $hojaCalculo = IOFactory::load('listaDAW.xlsx');
