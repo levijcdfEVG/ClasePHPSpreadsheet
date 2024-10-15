@@ -1,0 +1,14 @@
+{
+    "name": "levijcdf/clase-php-spreadsheet",
+    "description": "Veremos como se pueden leer excels desde php",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Levi Josué Candeias de Figueiredo",
+            "email": "levijosuecandeiasdefigueiredo.guadalupe@alumnado.fundacionloyola.net"
+        }
+    ],
+    "require": {
+        "phpoffice/phpspreadsheet": "^3.3"
+    }
+}
