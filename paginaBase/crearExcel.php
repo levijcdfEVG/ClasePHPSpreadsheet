@@ -48,5 +48,5 @@ if (!file_exists('datosAlumnos.xlsx')) {
     $writer = new Xlsx($hojaDeCalculo);
     $writer->save('datosAlumnos.xlsx');
 }else {
-    echo "<h1>El fichero ya existe</h1>";
+    echo "El fichero ya existe";
 }
