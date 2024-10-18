@@ -12,7 +12,7 @@ use \PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 //Creamos el objeto de hoja de calculo
 $hojaDeCalculo = new Spreadsheet();
 $activeWorksheet = $hojaDeCalculo->getActiveSheet();
-for ($i=1; $i < 10; $i++) { 
+for ($i=1; $i <= 10; $i++) { 
     $activeWorksheet->setCellValue('A'.$i, '¡Hola mundo!');
 }
 
