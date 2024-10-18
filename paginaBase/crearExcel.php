@@ -37,6 +37,7 @@ $alumnos = array(
     20 => 'Vidigal Barroso, María'
 );
 
+//Recorremos el array e imprimimos los datos en la hoja de calculo
 foreach ($alumnos as $key => $value) {
     $activeWorksheet->setCellValue('A'.$key, $key);
     $activeWorksheet->setCellValue('B'.$key, $value);
