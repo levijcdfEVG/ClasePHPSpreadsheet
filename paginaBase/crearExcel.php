@@ -37,9 +37,9 @@ $alumnos = array(
     20 => 'Vidigal Barroso, María'
 );
 
-for ($i=1; $i <= 10; $i++) { 
-    $activeWorksheet->setCellValue('A'.$i, 'Esto es una prueba');
-    $activeWorksheet->setCellValue('B'.$i, $i);
+foreach ($alumnos as $key => $value) {
+    $activeWorksheet->setCellValue('A'.$key, $key);
+    $activeWorksheet->setCellValue('B'.$key, $value);
 }
 
 
