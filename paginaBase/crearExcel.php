@@ -2,9 +2,8 @@
 
 //Fuente: https://phpspreadsheet.readthedocs.io/en/latest/
 
-
+//Dependencias de la página
 require '../vendor/autoload.php';
-
 use \PhpOffice\PhpSpreadsheet\Spreadsheet;
 use \PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 
