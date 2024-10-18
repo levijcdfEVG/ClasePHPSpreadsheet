@@ -47,6 +47,8 @@ if (!file_exists('datosAlumnos.xlsx')) {
     //Crear el objeto que va a escribir la hoja de calculo
     $writer = new Xlsx($hojaDeCalculo);
     $writer->save('datosAlumnos.xlsx');
+
+    echo "Fichero creado";
 }else {
     echo "El fichero ya existe";
 }
