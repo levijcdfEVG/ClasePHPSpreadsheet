@@ -3,7 +3,7 @@
 //Fuente: https://phpspreadsheet.readthedocs.io/en/latest/
 
 
-require '/vendor/autoload.php';
+require '../vendor/autoload.php';
 
 use \PhpOffice\PhpSpreadsheet\Spreadsheet;
 use \PhpOffice\PhpSpreadsheet\Writer\Xlsx;
@@ -12,11 +12,37 @@ use \PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 //Creamos el objeto de hoja de calculo
 $hojaDeCalculo = new Spreadsheet();
 $activeWorksheet = $hojaDeCalculo->getActiveSheet();
+
+//Creamos un array con los alumnos de DAW
+$alumnos = array(
+    1 => 'Arias Carroza, Javier',
+    2 => 'Caldito Gómez, Pablo',
+    3 => 'Candeias De Figueiredo, Leví Josué',
+    4 => 'Del Valle Del Pino, José Luis',
+    5 => 'Fariña Morena, David',
+    6 => 'Gómez Delgado, Álvaro',
+    7 => 'González Bernáldez, Fernando José',
+    8 => 'Guiberteau Franco, Ángel',
+    9 => 'Hernández Sánchez, Paloma',
+    10 => 'López Vega, Míriam',
+    11 => 'Martín Llera, Ceus',
+    12 => 'Moruno Herrojo, Celia',
+    13 => 'Paz Bernal, Ismael',
+    14  => 'Peña Domínguez, Mauricio',
+    15 => 'Rodríguez Botello, Carlos',
+    16 => 'Sánchez Díaz, Alberto',
+    17 => 'Sánchez Gallardo, Hugo',
+    18 => 'Silva Vega, David',
+    19 => 'Telo Núñez, Joaquín Francisco',
+    20 => 'Vidigal Barroso, María'
+);
+
 for ($i=1; $i <= 10; $i++) { 
-    $activeWorksheet->setCellValue('A'.$i, '¡Hola mundo!');
+    $activeWorksheet->setCellValue('A'.$i, 'Esto es una prueba');
+    $activeWorksheet->setCellValue('B'.$i, $i);
 }
 
 
 //Crear el objeto que va a escribir la hoja de calculo
-$writer = new Xlsx($spreadsheet);
-$writer->save('holaMundo.xlsx');
+$writer = new Xlsx($hojaDeCalculo);
+$writer->save('datosAlumnos.xlsx');
